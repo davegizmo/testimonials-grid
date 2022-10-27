@@ -1,0 +1,129 @@
+body {
+    display: grid;
+    background-color: hsl(210, 46%, 95%);
+    padding: 2rem 2rem;
+    align-self: center;
+    font-family: 'Barlow Semi Condensed';
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0%;
+}
+
+h2 {
+    color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin: 0 0 2% 0;
+}
+
+p {
+    color: hsl(0, 0%, 81%);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+    width: 35px;
+}
+
+article {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-row-gap: 1.5rem;
+}
+
+.grid-item {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    align-items: center;
+}
+
+.item-1 {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(263, 55%, 52%);
+}
+
+.item-2 {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(217, 19%, 35%);
+}
+
+.item-3 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.item-4 {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(219, 29%, 14%);
+}
+
+.item-5 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 48rem) {
+
+    /* h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    article {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    } */
+
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        width: min(95%, 70rem);
+        margin-inline: auto;
+    }
+
+    .item-1 {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(263, 55%, 52%);
+        grid-column: 1 / span 2;
+    }
+
+    .item-2 {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(217, 19%, 35%);
+        grid-column: 3 / 3;
+    }
+
+    .item-3 {
+        background-color: hsl(0, 0%, 100%);
+        grid-row: 2 / span 1;
+    }
+
+    .item-4 {
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(219, 29%, 14%);
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 2;
+    }
+
+    .item-5 {
+        background-color: hsl(0, 0%, 100%);
+        grid-row: 1 / span 2;
+        height: auto;
+        /* height: 80vh; */
+    }
+}
